@@ -23,6 +23,13 @@ const configSchema = {
     corsHeaders: loader.string('SERVER_CORS_ALLOW_HEADERS'),
     corsOrigins: loader.string('SERVER_CORS_ALLOW_ORIGINS'),
   },
+  database: {
+    host: loader.string('DB_HOST'),
+    port: loader.number('DB_PORT'),
+    database: loader.string('DB_DATABASE_NAME'),
+    username: loader.string('DB_USERNAME'),
+    password: loader.string.hidden('DB_PASSWORD'),
+  }
 }
 
 export default values(configSchema)

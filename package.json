@@ -13,6 +13,7 @@
     "start-lr": "tsc-watch --onSuccess \"npm run start\"",
     "test": "jest --colors --detectOpenHandles --forceExit",
     "test-lr": "npm run test -- --watch",
+    "typeorm": "typeorm-ts-node-commonjs",
     "cover": "npm run test -- --collectCoverage",
     "ci-test": "npm run cover -- --reporters=default --reporters=jest-junit --ci",
     "ci-lint": "npm run lint -- -f checkstyle -o ./output/checkstyle-result.xml",
@@ -40,7 +41,9 @@
     "lodash": "^4.17.21",
     "node-healthz": "^1.0.1",
     "npm-run-series": "^1.0.1",
+    "pg": "^8.8.0",
     "source-map-support": "^0.5.19",
+    "typeorm": "^0.3.10",
     "unicore": "^0.4.0"
   },
   "devDependencies": {
@@ -66,7 +69,8 @@
     "supertest": "^4.0.2",
     "supertest-as-promised": "^4.0.2",
     "ts-jest": "^27.0.5",
+    "ts-node": "^10.9.1",
     "tsc-watch": "^4.2.8",
-    "typescript": "^4.4.2"
+    "typescript": "4.5"
   }
 }
