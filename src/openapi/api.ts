@@ -61,7 +61,15 @@ export interface paths {
 export interface components {
   schemas: {
     Statistics: {
-      characters?: components["schemas"]["Character"][];
+      charactersCount: number;
+      averageAge: number;
+      averageWeight: number;
+      genders: {
+        female?: number;
+        male?: number;
+        other?: number;
+      };
+      characters: components["schemas"]["Character"][];
     };
     Character: {
       id?: number;

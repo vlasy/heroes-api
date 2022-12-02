@@ -59,10 +59,31 @@ components:
     Statistics:
       type: object
       properties:
+        charactersCount:
+          type: number
+        averageAge:
+          type: number
+        averageWeight:
+          type: number
+        genders: 
+          type: object
+          properties:
+            female:
+              type: number
+            male:
+              type: number
+            other:
+              type: number
         characters:
           type: array
           items:
             $ref: '#/components/schemas/Character'
+      required:
+        - charactersCount
+        - averageAge
+        - averageWeight
+        - genders
+        - characters
     Character:
       type: object
       properties:

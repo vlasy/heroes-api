@@ -19,7 +19,7 @@ export class Character {
     minimalDistance: number
 
     @Column()
-    weight: number
+    weight: string
 
     @Column()
     born: Date
