@@ -10,6 +10,10 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Statistics'
   /hello:
     get:
       responses:
@@ -50,3 +54,35 @@ paths:
                     type: string
                   payload:
                     type: object
+components:
+  schemas:
+    Statistics:
+      type: object
+      properties:
+        characters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Character'
+    Character:
+      type: object
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        gender:
+          type: string
+        ability:
+          type: string
+        minimalDistance:
+          type: number
+        weight:
+          type: number
+        born:
+          type: string
+        inSpaceSince:
+          type: string
+        beerConsumption:
+          type: number
+        knowsTheAnswer:
+          type: boolean

@@ -8,7 +8,11 @@ export interface paths {
     get: {
       responses: {
         /** OK */
-        200: unknown;
+        200: {
+          content: {
+            "application/json": components["schemas"]["Statistics"];
+          };
+        };
       };
     };
   };
@@ -54,7 +58,25 @@ export interface paths {
   };
 }
 
-export interface components {}
+export interface components {
+  schemas: {
+    Statistics: {
+      characters?: components["schemas"]["Character"][];
+    };
+    Character: {
+      id?: number;
+      name?: string;
+      gender?: string;
+      ability?: string;
+      minimalDistance?: number;
+      weight?: number;
+      born?: string;
+      inSpaceSince?: string;
+      beerConsumption?: number;
+      knowsTheAnswer?: boolean;
+    };
+  };
+}
 
 export interface operations {}
 
