@@ -5,6 +5,11 @@ info:
 servers:
   - url: https://api.server.test/v1
 paths:
+  /heroes-statistics:
+    get:
+      responses:
+        '200':
+          description: OK
   /hello:
     get:
       responses:

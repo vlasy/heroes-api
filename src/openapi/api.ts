@@ -4,6 +4,14 @@
  */
 
 export interface paths {
+  "/heroes-statistics": {
+    get: {
+      responses: {
+        /** OK */
+        200: unknown;
+      };
+    };
+  };
   "/hello": {
     get: {
       responses: {
